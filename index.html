@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Account Store</title>
+  <title>EagleSpy V4 - Buy Now</title>
   <style>
     * {
       margin: 0;
@@ -14,14 +14,12 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #f7f7f7;
+      background-color: #f5f5f5;
       color: #333;
-      line-height: 1.6;
     }
 
-    /* Navbar */
     nav {
-      background-color: #444;
+      background-color: #2c3e50;
       color: white;
       padding: 1rem;
     }
@@ -46,10 +44,9 @@
       text-decoration: underline;
     }
 
-    /* Hero Section */
     .hero {
       height: 60vh;
-      background-color: #333;
+      background-color: #34495e;
       color: white;
       display: flex;
       justify-content: center;
@@ -63,13 +60,8 @@
       margin-bottom: 20px;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-
     .cta-btn {
-      background-color: #e74c3c; /* Red button */
+      background-color: #e74c3c;
       color: white;
       padding: 12px 25px;
       font-size: 1.1rem;
@@ -83,140 +75,76 @@
       transform: scale(1.1);
     }
 
-    /* Account Plans Section */
-    .account-plans {
-      display: flex;
-      justify-content: center;
-      margin: 50px 0;
-      padding: 50px 20px;
-    }
-
-    .plan {
-      background-color: #fff;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      padding: 30px;
+    .product-info {
       text-align: center;
-      width: 300px;
-      margin: 0 15px;
-    }
-
-    .plan h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #e74c3c;
-    }
-
-    .plan p {
-      font-size: 1rem;
-      margin-bottom: 20px;
-      color: #666;
-    }
-
-    .plan .price {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      color: #2c3e50;
-    }
-
-    .plan .cta-btn {
-      background-color: #e74c3c;
-      padding: 10px 20px;
-      text-decoration: none;
-      color: white;
-      border-radius: 5px;
-    }
-
-    .plan .cta-btn:hover {
-      background-color: #c0392b;
-      transform: scale(1.05);
-    }
-
-    /* Services Section */
-    .services {
-      background-color: #f7f7f7;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .services h2 {
-      color: #e74c3c;
-      margin-bottom: 40px;
-    }
-
-    .services .service-item {
-      display: inline-block;
-      width: 30%;
-      margin: 10px;
-      padding: 30px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .services .service-item h3 {
-      color: #e74c3c;
-      margin-bottom: 10px;
-    }
-
-    .services .service-item p {
-      color: #333;
-      font-size: 1rem;
-    }
-
-    /* Footer Styles */
-    footer {
-      background-color: #444;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    footer p {
-      margin: 10px 0;
-    }
-
-    /* Form Styles */
-    .form-section {
-      background-color: #fff;
-      padding: 50px 20px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
       margin-top: 50px;
     }
 
-    .form-section h2 {
+    .product-info h2 {
+      color: #e74c3c;
       margin-bottom: 20px;
+    }
+
+    .product-info p {
+      color: #555;
+      font-size: 1.2rem;
+    }
+
+    /* Bitcoin Payment Popup Styles */
+    #paymentPopup {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popup-content {
+      background-color: #333;
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      width: 80%;
+      max-width: 500px;
+    }
+
+    .popup-content h3 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
       color: #e74c3c;
     }
 
-    .form-section form {
-      max-width: 400px;
-      margin: 0 auto;
-      text-align: left;
+    .popup-content p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
     }
 
-    .form-section input {
-      width: 100%;
-      padding: 12px;
+    .popup-content .btc-address {
+      background-color: #444;
+      padding: 10px;
+      font-size: 1.2rem;
       margin-bottom: 20px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+      word-wrap: break-word;
     }
 
-    .form-section button {
-      width: 100%;
-      padding: 12px;
+    .popup-content button {
       background-color: #e74c3c;
       color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
-    .form-section button:hover {
+    .popup-content button:hover {
       background-color: #c0392b;
     }
   </style>
@@ -227,75 +155,55 @@
   <nav>
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#plans">Plans</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#login">Login</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero">
     <div>
-      <h1>Welcome to Account Store</h1>
-      <p>Choose your plan, create your account, and manage your services!</p>
-      <a href="#plans" class="cta-btn">Browse Account Plans</a>
+      <h1>EagleSpy V4 - Premium Software</h1>
+      <p>The ultimate solution for managing your online accounts securely.</p>
+      <a href="#buyNow" class="cta-btn">Buy Now</a>
     </div>
   </section>
 
-  <!-- Account Plans Section -->
-  <section id="plans" class="account-plans">
-    <div class="plan">
-      <h3>Basic</h3>
-      <p>Perfect for personal use with all essential features.</p>
-      <div class="price">$5/month</div>
-      <a href="#signup" class="cta-btn">Sign Up</a>
-    </div>
-    <div class="plan">
-      <h3>Pro</h3>
-      <p>For professionals with advanced features and support.</p>
-      <div class="price">$15/month</div>
-      <a href="#signup" class="cta-btn">Sign Up</a>
-    </div>
-    <div class="plan">
-      <h3>Enterprise</h3>
-      <p>Designed for large businesses with full customization.</p>
-      <div class="price">$50/month</div>
-      <a href="#signup" class="cta-btn">Sign Up</a>
-    </div>
+  <!-- Product Information -->
+  <section class="product-info" id="buyNow">
+    <h2>Buy EagleSpy V4</h2>
+    <p>Get the latest version of EagleSpy V4 today for only 200€ worth of Bitcoin. Follow the steps below to complete your purchase.</p>
+    <a href="javascript:void(0);" class="cta-btn" onclick="showPaymentPopup()">Proceed to Payment</a>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service-item">
-      <h3>Account Management</h3>
-      <p>Manage all your account details and preferences with ease.</p>
+  <!-- Bitcoin Payment Popup -->
+  <div id="paymentPopup">
+    <div class="popup-content">
+      <h3>Complete Your Purchase</h3>
+      <p>Please send 200€ worth of Bitcoin to the following address:</p>
+      <div class="btc-address">
+        bc1q3epde8xsnqf949sklz0xycl0v6vy8s2pgfu65f
+      </div>
+      <p>Once the transaction is completed, you will receive access to EagleSpy V4.</p>
+      <button onclick="closePaymentPopup()">Close</button>
     </div>
-    <div class="service-item">
-      <h3>Custom Settings</h3>
-      <p>Fully customize your account for a tailored experience.</p>
-    </div>
-    <div class="service-item">
-      <h3>24/7 Support</h3>
-      <p>Get round-the-clock support for any account-related issues.</p>
-    </div>
-  </section>
-
-  <!-- Login Section -->
-  <section id="login" class="form-section">
-    <h2>Login to Your Account</h2>
-    <form>
-      <input type="email" placeholder="Email Address" required>
-      <input type="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-  </section>
+  </div>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Account Store. All Rights Reserved.</p>
+    <p>&copy; 2025 EagleSpy Software. All Rights Reserved.</p>
   </footer>
 
+  <script>
+    // Function to show the payment popup
+    function showPaymentPopup() {
+      document.getElementById('paymentPopup').style.display = 'flex';
+    }
+
+    // Function to close the payment popup
+    function closePaymentPopup() {
+      document.getElementById('paymentPopup').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
