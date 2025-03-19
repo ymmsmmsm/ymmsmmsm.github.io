@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cool Red and Grey Website</title>
+  <title>Account Store</title>
   <style>
     * {
       margin: 0;
@@ -13,15 +13,15 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
       color: #333;
+      line-height: 1.6;
     }
 
-    /* Navbar Styles */
+    /* Navbar */
     nav {
-      background: #333;
+      background-color: #444;
       color: white;
       padding: 1rem;
     }
@@ -46,14 +46,14 @@
       text-decoration: underline;
     }
 
-    /* Hero Section Styles */
+    /* Hero Section */
     .hero {
-      height: 100vh;
-      background: #808080;
+      height: 60vh;
+      background-color: #333;
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
       text-align: center;
       padding: 0 20px;
     }
@@ -69,9 +69,9 @@
     }
 
     .cta-btn {
-      background-color: #ff3333; /* Red button */
+      background-color: #e74c3c; /* Red button */
       color: white;
-      padding: 10px 20px;
+      padding: 12px 25px;
       font-size: 1.1rem;
       text-decoration: none;
       border-radius: 5px;
@@ -79,62 +79,94 @@
     }
 
     .cta-btn:hover {
-      background-color: #cc0000;
-      transform: scale(1.1); /* Animation effect */
+      background-color: #c0392b;
+      transform: scale(1.1);
     }
 
-    /* About Section */
-    .about {
-      background-color: #808080;
-      padding: 60px 20px;
+    /* Account Plans Section */
+    .account-plans {
+      display: flex;
+      justify-content: center;
+      margin: 50px 0;
+      padding: 50px 20px;
+    }
+
+    .plan {
+      background-color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 30px;
       text-align: center;
+      width: 300px;
+      margin: 0 15px;
     }
 
-    .about h2 {
+    .plan h3 {
+      font-size: 2rem;
       margin-bottom: 20px;
-      color: #ff3333; /* Red header */
+      color: #e74c3c;
     }
 
-    .about p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #333;
+    .plan p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    .plan .price {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .plan .cta-btn {
+      background-color: #e74c3c;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .plan .cta-btn:hover {
+      background-color: #c0392b;
+      transform: scale(1.05);
     }
 
     /* Services Section */
     .services {
+      background-color: #f7f7f7;
       padding: 60px 20px;
       text-align: center;
-      background-color: #f4f4f4;
     }
 
     .services h2 {
+      color: #e74c3c;
       margin-bottom: 40px;
-      color: #ff3333; /* Red header */
     }
 
     .services .service-item {
       display: inline-block;
       width: 30%;
       margin: 10px;
-      padding: 20px;
-      background-color: #808080; /* Grey box */
+      padding: 30px;
+      background-color: white;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .services .service-item h3 {
+      color: #e74c3c;
       margin-bottom: 10px;
-      color: #ff3333; /* Red service title */
     }
 
     .services .service-item p {
+      color: #333;
       font-size: 1rem;
     }
 
     /* Footer Styles */
     footer {
-      background-color: #333;
+      background-color: #444;
       color: white;
       text-align: center;
       padding: 20px;
@@ -144,6 +176,49 @@
       margin: 10px 0;
     }
 
+    /* Form Styles */
+    .form-section {
+      background-color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-top: 50px;
+    }
+
+    .form-section h2 {
+      margin-bottom: 20px;
+      color: #e74c3c;
+    }
+
+    .form-section form {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .form-section input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-section button {
+      width: 100%;
+      padding: 12px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-section button:hover {
+      background-color: #c0392b;
+    }
   </style>
 </head>
 <body>
@@ -152,47 +227,74 @@
   <nav>
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#plans">Plans</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#login">Login</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero">
     <div>
-      <h1>Welcome to Our Cool Website</h1>
-      <p>Your journey to success starts here!</p>
-      <a href="#services" class="cta-btn">Explore Our Services</a>
+      <h1>Welcome to Account Store</h1>
+      <p>Choose your plan, create your account, and manage your services!</p>
+      <a href="#plans" class="cta-btn">Browse Account Plans</a>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>We are a team of passionate individuals dedicated to providing innovative solutions to help you grow. Our expertise in technology, design, and strategy will transform your ideas into reality.</p>
+  <!-- Account Plans Section -->
+  <section id="plans" class="account-plans">
+    <div class="plan">
+      <h3>Basic</h3>
+      <p>Perfect for personal use with all essential features.</p>
+      <div class="price">$5/month</div>
+      <a href="#signup" class="cta-btn">Sign Up</a>
+    </div>
+    <div class="plan">
+      <h3>Pro</h3>
+      <p>For professionals with advanced features and support.</p>
+      <div class="price">$15/month</div>
+      <a href="#signup" class="cta-btn">Sign Up</a>
+    </div>
+    <div class="plan">
+      <h3>Enterprise</h3>
+      <p>Designed for large businesses with full customization.</p>
+      <div class="price">$50/month</div>
+      <a href="#signup" class="cta-btn">Sign Up</a>
+    </div>
   </section>
 
   <!-- Services Section -->
   <section id="services" class="services">
     <h2>Our Services</h2>
     <div class="service-item">
-      <h3>Web Design</h3>
-      <p>Create stunning websites that represent your brand and connect with your audience.</p>
+      <h3>Account Management</h3>
+      <p>Manage all your account details and preferences with ease.</p>
     </div>
     <div class="service-item">
-      <h3>SEO Optimization</h3>
-      <p>Boost your website's visibility and improve your search engine rankings.</p>
+      <h3>Custom Settings</h3>
+      <p>Fully customize your account for a tailored experience.</p>
     </div>
     <div class="service-item">
-      <h3>Consulting</h3>
-      <p>Receive expert advice to make the best decisions for your business.</p>
+      <h3>24/7 Support</h3>
+      <p>Get round-the-clock support for any account-related issues.</p>
     </div>
+  </section>
+
+  <!-- Login Section -->
+  <section id="login" class="form-section">
+    <h2>Login to Your Account</h2>
+    <form>
+      <input type="email" placeholder="Email Address" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Cool Website. All Rights Reserved.</p>
+    <p>&copy; 2025 Account Store. All Rights Reserved.</p>
   </footer>
 
 </body>
