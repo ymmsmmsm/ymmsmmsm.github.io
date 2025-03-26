@@ -3,91 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Craxs RAT Clone</title>
+    <title>JoZar0</title>
     <style>
         body {
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: black;
+        }
+        
+        .main-text {
             color: white;
-            text-align: center;
-        }
-        .header {
-            background-color: red;
-            padding: 20px;
-            font-size: 24px;
+            font-size: 72px;
             font-weight: bold;
+            text-shadow: 
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 30px #e60073,
+                0 0 40px #e60073,
+                0 0 50px #e60073,
+                0 0 60px #e60073;
+            margin-bottom: 20px;
+            animation: glow-pulse 2s infinite alternate;
         }
-        .subheader {
-            font-size: 18px;
-            margin-top: 5px;
-        }
-        .languages {
-            margin: 10px 0;
-            font-size: 14px;
-        }
-        .container {
-            margin: 20px auto;
-            width: 60%;
-            background: #1a1a1a;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .price {
-            color: red;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .buy-button {
-            background-color: red;
+        
+        .subtitle-box {
+            background-color: rgba(255, 255, 255, 0.1);
             color: white;
-            padding: 10px 20px;
-            border: none;
+            padding: 15px 30px;
+            border-radius: 6px;
             font-size: 18px;
-            cursor: pointer;
-            margin-top: 10px;
+            box-shadow: 
+                0 0 10px rgba(255, 255, 255, 0.5),
+                0 0 20px rgba(230, 0, 115, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: box-glow 2s infinite alternate;
         }
-        .features {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
+        
+        @keyframes glow-pulse {
+            from {
+                text-shadow: 
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 30px #e60073,
+                    0 0 40px #e60073,
+                    0 0 50px #e60073,
+                    0 0 60px #e60073;
+            }
+            to {
+                text-shadow: 
+                    0 0 15px #fff,
+                    0 0 25px #fff,
+                    0 0 35px #ff4da6,
+                    0 0 45px #ff4da6,
+                    0 0 55px #ff4da6,
+                    0 0 65px #ff4da6;
+            }
         }
-        .feature-box {
-            background: #222;
-            padding: 15px;
-            border-radius: 5px;
-            width: 30%;
-        }
-        .feature-title {
-            color: red;
-            font-weight: bold;
+        
+        @keyframes box-glow {
+            from {
+                box-shadow: 
+                    0 0 10px rgba(255, 255, 255, 0.5),
+                    0 0 20px rgba(230, 0, 115, 0.3);
+            }
+            to {
+                box-shadow: 
+                    0 0 15px rgba(255, 255, 255, 0.7),
+                    0 0 25px rgba(230, 0, 115, 0.5);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">Craxs RAT</div>
-    <div class="subheader">Premier Android Remote Control Tool</div>
-    <div class="languages">English | 中文 (Chinese) | Tiếng Việt (Vietnamese) | 한국어 (Korean)</div>
-    <div class="container">
-        <img src="devil_icon.png" alt="Devil Icon" width="80">
-        <h2>Lifetime License</h2>
-        <p>Purchase once. Unlimited usage. FREE UPDATES.</p>
-        <div class="price">Price: $100 (BTC)</div>
-        <button class="buy-button">BUY NOW</button>
-    </div>
-    <div class="features">
-        <div class="feature-box">
-            <div class="feature-title">APK File Creator</div>
-            <p>Modify and generate APK files with Craxsrat...</p>
-        </div>
-        <div class="feature-box">
-            <div class="feature-title">Device Management Panel</div>
-            <p>Supervise and control all connected devices...</p>
-        </div>
-        <div class="feature-box">
-            <div class="feature-title">Remote Screen Viewing</div>
-            <p>Experience a seamless and rapid connection...</p>
-        </div>
-    </div>
+    <div class="main-text">JoZar0</div>
+    <div class="subtitle-box">A User From Germany</div>
 </body>
 </html>
